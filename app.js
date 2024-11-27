@@ -15,7 +15,7 @@ forma.addEventListener("submit", (e) => {
       password: e.target[2].value,
     }),
   }).then(() => {
-    window.location.reload(); // Ma'lumot qo'shilganda sahifani yangilash
+    window.location.reload();
   });
 });
 
@@ -32,11 +32,9 @@ forma.addEventListener("submit", (e) => {
     let delBtn = document.createElement("button");
     let editBtn = document.createElement("button");
 
-    // Tugmalarni sozlash
     delBtn.textContent = "Delete";
     editBtn.textContent = "Edit";
 
-    // Jadvalga ma'lumotlarni joylashtirish
     td1.textContent = user.name;
     td2.textContent = user.email;
     td3.textContent = user.password;
@@ -45,16 +43,14 @@ forma.addEventListener("submit", (e) => {
     td4.append(delBtn, editBtn);
     tbody.append(tr);
 
-    // Delete tugmasi
     delBtn.addEventListener("click", () => {
       fetch(`http://localhost:3000/users/${user.id}`, {
         method: "DELETE",
       }).then(() => {
-        tr.remove(); // Jadval qatorini o'chirish
+        tr.remove();
       }).catch((err) => console.error("Xatolik:", err));
     });
 
-    // Edit tugmasi
     editBtn.addEventListener("click", () => {
       let name = prompt("Name:", user.name) || user.name;
       let email = prompt("Email:", user.email) || user.email;
