@@ -17,7 +17,7 @@ forma.addEventListener("submit", (e) => {
   }).then(() => {
     window.location.reload();
   });
-});
+}); 
 
 (async function () {
   let response = await fetch("http://localhost:3000/users");
