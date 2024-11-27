@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+            /* margin: 150px; */
+            margin-top: 30px;
+        }
+        td, th {
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .forma {
+            display: flex;
+            width: 60%;
+            text-align: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+        input {
+            padding: 10px 80px ;
+            padding-left: 10px;
+            border: 2px solid black;
+        }
+        button {
+            padding: 10px 25px;
+            border: none;
+            background-color: blue;
+            color: white;
+            border-radius: 6px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <form action="" class="forma">
+        <input type="text" placeholder="Ism kiriting: ">
+        <input type="email" placeholder="Email kiriting:">
+        <input type="password" placeholder="Parol kiriting: ">
+        <button type="submit">Submit</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="./app.js"></script>
+</body>
+</html>
